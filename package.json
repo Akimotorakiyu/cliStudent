@@ -19,6 +19,9 @@
     "clean-webpack-plugin": "^3.0.0",
     "cross-env": "^7.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^4.2.3",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
     "raw-loader": "^4.0.0",
     "ts-loader": "^6.2.1",
     "ts-node": "^8.6.2",
@@ -31,5 +34,10 @@
   "dependencies": {
     "@types/webpack": "^4.41.6",
     "core-js": "^3.6.4"
+  },
+  "husky":{
+    "hooks":{
+      "pre-commit":"pretty-quick --stage"
+    }
   }
 }
