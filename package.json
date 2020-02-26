@@ -35,9 +35,9 @@
     "@types/webpack": "^4.41.6",
     "core-js": "^3.6.4"
   },
-  "husky":{
-    "hooks":{
-      "pre-commit":"pretty-quick --stage"
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
     }
   }
 }

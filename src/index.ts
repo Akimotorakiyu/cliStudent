@@ -1,14 +1,13 @@
-import "./print"
-import "./helloBabel"
-import "./jsx"
-import "./tsx"
-
+import "./print";
+import "./helloBabel";
+import "./jsx";
+import "./tsx";
 
 const hello = () => {
-    const str = "hello world!111";
-    console.log(...str);
+  const str = "hello world!111";
+  console.log(...str);
 };
 
-hello()
+hello();
 
-Reflect.set(window,"helloBabelFromTS",hello)
+Reflect.set(window, "helloBabelFromTS", hello);

@@ -1,8 +1,8 @@
 const hello = () => {
-    const str = "hello world!111";
-    console.log(...str);
+  const str = "hello world!111";
+  console.log(...str);
 };
 
-hello()
+hello();
 
-Reflect.set(window,"helloBabel",hello)
+Reflect.set(window, "helloBabel", hello);
