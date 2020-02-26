@@ -38,34 +38,32 @@ const config: webpack.Configuration = {
   },
   module: {
     rules: [
-      {
-        test: /\.tsx?$/,
-        use: "ts-loader",
-        exclude: /node_modules/
-      },
+    
       {
         test: /\.md?$/,
         use: "raw-loader",
         exclude: /node_modules/
       },
       {
-        test: /\.js$/,
+        test: /\.[tj]s$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: "babel-loader",
           options: {
             presets: [
-              "@babel/preset-env",
-              {
-                targets: {
-                  ie: "11",
-                  edge: "17",
-                  firefox: "60",
-                  chrome: "67",
-                  safari: "11.1"
-                },
-                useBuiltIns: "usage"
-              }
+              [
+                "@babel/preset-env",
+                {
+                  corejs:3,
+                  targets: {
+                    ie: "11",
+                    edge: "17",
+                    firefox: "60",
+                    chrome: "67",
+                    safari: "11.1"
+                  }
+                }
+              ]
             ]
           }
         }
@@ -73,7 +71,7 @@ const config: webpack.Configuration = {
     ]
   },
   resolve: {
-    extensions: [".jsx", ".tsx", ".ts", ".js"]
+    extensions: [".ts", ".js",".jsx", ".tsx"]
   },
   output: {
     filename: "index.js",
