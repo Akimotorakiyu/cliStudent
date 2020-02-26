@@ -21,7 +21,7 @@ const plugins: webpack.Plugin[] = [
     cleanOnceBeforeBuildPatterns: ["dist"]
   }),
   new HtmlWebpackPlugin({
-    template:"public/index.html"
+    template: "public/index.html"
   }),
   new webpack.NamedModulesPlugin(),
   new webpack.HotModuleReplacementPlugin()
@@ -47,11 +47,33 @@ const config: webpack.Configuration = {
         test: /\.md?$/,
         use: "raw-loader",
         exclude: /node_modules/
+      },
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [
+              "@babel/preset-env",
+              {
+                targets: {
+                  ie: "11",
+                  edge: "17",
+                  firefox: "60",
+                  chrome: "67",
+                  safari: "11.1"
+                },
+                useBuiltIns: "usage"
+              }
+            ]
+          }
+        }
       }
     ]
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"]
+    extensions: [".jsx", ".tsx", ".ts", ".js"]
   },
   output: {
     filename: "index.js",

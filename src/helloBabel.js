@@ -1,7 +1,3 @@
-import "./print"
-import "./helloBabel"
-
-
 const hello = () => {
     const str = "hello world!111";
     console.log(...str);
@@ -9,4 +5,4 @@ const hello = () => {
 
 hello()
 
-Reflect.set(window,"helloBabelFromTS",hello)
+Reflect.set(window,"helloBabel",hello)
