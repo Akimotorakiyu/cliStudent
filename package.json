@@ -1,0 +1,21 @@
+{
+  "name": "cli-student",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Akimotorakiyu/cliStudent.git",
+  "author": "瓦姆乌·湫曗 <autumnsilverleaves@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": ""
+  },
+  "devDependencies": {
+    "raw-loader": "^4.0.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.8.2",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "@types/webpack": "^4.41.6"
+  }
+}
