@@ -16,19 +16,28 @@ if (modeIndex >= 0) {
   throw "未定义--mode， 默认mode";
 }
 
-const plugins: webpack.Plugin[] = [
-  new CleanWebpackPlugin({
-    cleanOnceBeforeBuildPatterns: ["dist"]
-  }),
-  new HtmlWebpackPlugin({
-    template: "public/index.html"
-  }),
-  new webpack.NamedModulesPlugin(),
-  new webpack.HotModuleReplacementPlugin()
-];
+const plugins: webpack.Plugin[] = [];
+
 if (isDevelopment) {
+  plugins.push(
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: ["dist"]
+    })
+  );
 }
 
+plugins.push(
+  new HtmlWebpackPlugin({
+    template: "public/index.html"
+  })
+);
+
+if (isDevelopment) {
+  plugins.push(
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin()
+  );
+}
 const config: webpack.Configuration = {
   entry: "./src/index.ts",
   devtool: "inline-source-map",

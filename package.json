@@ -6,7 +6,8 @@
   "author": "瓦姆乌·湫曗 <autumnsilverleaves@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "serve": "cross-env TS_NODE_PROJECT=\"scripts/tsconfig-for-webpack-config.json\" webpack-dev-server --config scripts/webpack.config.ts --mode development"
+    "serve": "cross-env TS_NODE_PROJECT=\"scripts/tsconfig-for-webpack-config.json\" webpack-dev-server --config scripts/webpack.config.ts --mode development",
+    "build": "cross-env TS_NODE_PROJECT=\"scripts/tsconfig-for-webpack-config.json\" webpack --config scripts/webpack.config.ts --mode production"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
