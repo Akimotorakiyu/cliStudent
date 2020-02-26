@@ -38,23 +38,23 @@ const config: webpack.Configuration = {
   },
   module: {
     rules: [
-    
       {
         test: /\.md?$/,
         use: "raw-loader",
         exclude: /node_modules/
       },
       {
-        test: /\.[tj]s$/,
+        test: /\.[tj]sx?$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: "babel-loader",
           options: {
             presets: [
+              ["@babel/preset-react"],
               [
                 "@babel/preset-env",
                 {
-                  corejs:3,
+                  corejs: 3,
                   targets: {
                     ie: "11",
                     edge: "17",
@@ -71,7 +71,7 @@ const config: webpack.Configuration = {
     ]
   },
   resolve: {
-    extensions: [".ts", ".js",".jsx", ".tsx"]
+    extensions: [".ts", ".js", ".jsx", ".tsx"]
   },
   output: {
     filename: "index.js",

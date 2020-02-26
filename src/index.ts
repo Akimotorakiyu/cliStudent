@@ -1,5 +1,7 @@
 import "./print"
 import "./helloBabel"
+import "./jsx"
+import "./tsx"
 
 
 const hello = () => {

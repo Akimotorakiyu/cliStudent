@@ -5,6 +5,19 @@
     "module": "commonjs",
     "target": "es2019",
     "allowJs": true,
-    "sourceMap": true
-  }
+    "sourceMap": true,
+    "jsx": "preserve"
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.tsx",
+    "src/**/*.jsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx",
+    "tests/**/*.js",
+    "tests/**/*.jsx"
+  ],
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }
