@@ -54,6 +54,7 @@ const config: webpack.Configuration = {
               [
                 "@babel/preset-env",
                 {
+                  //useBuiltIns:false,//default value is false
                   corejs: 3,
                   targets: {
                     ie: "11",
