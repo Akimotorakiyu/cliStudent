@@ -21,8 +21,10 @@ const plugins: webpack.Plugin[] = [
     cleanOnceBeforeBuildPatterns: ["dist"]
   }),
   new HtmlWebpackPlugin({
-    title: "Development"
-  })
+    template:"public/index.html"
+  }),
+  new webpack.NamedModulesPlugin(),
+  new webpack.HotModuleReplacementPlugin()
 ];
 if (isDevelopment) {
 }
@@ -30,6 +32,10 @@ if (isDevelopment) {
 const config: webpack.Configuration = {
   entry: "./src/index.ts",
   devtool: "inline-source-map",
+  devServer: {
+    contentBase: "dist",
+    hot: true
+  },
   module: {
     rules: [
       {

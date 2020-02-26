@@ -6,11 +6,11 @@
   "author": "瓦姆乌·湫曗 <autumnsilverleaves@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack --config scripts/webpack.config.ts --watch --mode development",
-    "serve":"webpack-dev-server --config scripts/webpack.config.ts --mode development"
+    "serve": "webpack-dev-server --config scripts/webpack.config.ts --mode development"
   },
   "devDependencies": {
     "@types/html-webpack-plugin": "^3.2.2",
+    "@types/webpack-dev-server": "^3.10.0",
     "clean-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^3.2.0",
     "raw-loader": "^4.0.0",
