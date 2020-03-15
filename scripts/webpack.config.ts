@@ -77,6 +77,15 @@ const config: webpack.Configuration = {
             ]
           }
         }
+      },
+      {
+        test: /\.css$/,
+        exclude: /(node_modules|bower_components)/,
+        use: [
+          {
+            loader: "css-loader"
+          }
+        ]
       }
     ]
   },
