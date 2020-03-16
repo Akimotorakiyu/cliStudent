@@ -1,0 +1,14 @@
+{
+  "name": "cli-student",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Akimotorakiyu/cliStudent.git",
+  "author": "瓦姆乌·湫曗 <autumnsilverleaves@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^13.9.1",
+    "gluegun": "^4.2.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3"
+  }
+}
