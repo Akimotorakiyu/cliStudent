@@ -5,6 +5,9 @@
   "repository": "https://github.com/Akimotorakiyu/cliStudent.git",
   "author": "瓦姆乌·湫曗 <autumnsilverleaves@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "node-dev ./bin/index.js serve serve --help"
+  },
   "dependencies": {
     "@types/node": "^13.9.1",
     "gluegun": "^4.2.0",
@@ -13,6 +16,7 @@
   },
   "devDependencies": {
     "husky": "^4.2.3",
+    "node-dev": "^4.0.0",
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1"
   },
