@@ -33,6 +33,7 @@ export default <GluegunCommand>{
         text: `finished!`
       });
       toolbox.print.success(`electron ${result || "installed!"}`);
+      await electronDir.removeAsync("newInstall.js");
     } else {
       toolbox.print.warning(
         "didn't find electron in dependencies or devDependencies, add electron package to your project first!"
