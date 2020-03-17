@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es2019",
     "module": "CommonJS",
-    "resolveJsonModule": true
-  }
+    "types": ["@types/node"]
+  },
+  "include": ["./src/**/*"]
 }

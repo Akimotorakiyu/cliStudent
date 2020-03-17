@@ -5,9 +5,13 @@
   "repository": "https://github.com/Akimotorakiyu/cliStudent.git",
   "author": "瓦姆乌·湫曗 <autumnsilverleaves@gmail.com>",
   "license": "MIT",
+  "bin": {
+    "my-cli": "./bin/index.js"
+  },
   "scripts": {
-    "dev": "node-dev ./bin/index.js serve serve --help",
-    "electron": "electron ."
+    "cli": "node ./bin/index.js",
+    "dev": "node-dev ./bin/index.js",
+    "electron": "node ./bin/index.js electron"
   },
   "dependencies": {
     "@types/node": "^13.9.1",
@@ -16,7 +20,6 @@
     "typescript": "^3.8.3"
   },
   "devDependencies": {
-    "electron": "^8.1.1",
     "husky": "^4.2.3",
     "node-dev": "^4.0.0",
     "prettier": "^1.19.1",
